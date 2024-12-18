@@ -1,0 +1,8 @@
+#e9ecef  bg color
+#eee4e1 about
+
+Some of my favorite projects include building Karner, a mock game credits shop I built to simulate the experience of purchasing in-game currency. It allows users to browse, select, and 'purchase' credits, mimicking a real-world transaction system for games. I designed it to showcase my front-end development skills, user interface design, and an understanding of e-commerce flows.
+
+Outside of coding, I enjoy traveling to different places, which keeps me creative and motivated.
+
+Feel free to check out my work or connect with me — I’d love to hear from you!

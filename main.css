@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Playwrite+HU:wght@100..400&display=swap');
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 200 to 1000 */
+
+.nunito-font {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* <weight>: Use a value from 300 to 800 */
+.parkinsans-font {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* <weight>: Use a value from 100 to 400 */
+.playwrite-hu-font {
+    font-family: "Playwrite HU", cursive;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+*, html {
+    scroll-behavior: smooth !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: #333;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #e9ecef;
+}
+
+main {
+    flex: 1;
+    margin-top: 70px;
+    min-width: 100vh;
+}
+
+/* navigation */
+#nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    font-family: "Nunito", sans-serif;
+    background-color: #ccc5b9;
+    align-content: center;
+    transition: top 0.3s;
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+    border-bottom: 1px solid #000000;
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0 150px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+#nav ul li {
+    margin-right: 20px;
+}
+#nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Adjust for spacing below text */
+    width: 0;
+    height: 0;
+    background-color: #b2967d;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.nav-link.active::after {
+    width: 10px; /* Circle size */
+    height: 10px;
+}
+  
+
+#footer {
+    padding: 0;
+    background-color: #b2967d;
+    text-align: center;
+    font-size: 12px;
+    color: #343a40;
+    height: 30px;
+}
+
+p#copyright {
+    background-color: #b2967d;
+    margin: 0;
+    padding: 5px 0;
+}
+
+#fbLink {
+    text-decoration: none;
+    color: #343a40;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    border-bottom: 1px solid #000000;
+    scroll-margin-top: 71px; /* Adjust this value based on your nav height */
+}
+
+/* home section */
+#home {
+    height: calc(100vh - 71px);
+    padding: 0;
+}
+
+
+#home-content.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 58px;
+    margin: 0;
+    text-align: center;
+    font-family: "Playwrite HU", cursive;
+    font-weight: 600;
+}
+
+#home p {
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    margin: 1em 0 0 0;
+}
+
+#view-my-projects {
+    font-family: "Parkinsans", sans-serif;
+    --bg: #4CAF50;
+    --text-color: #fff;
+    width: 200px;
+    border: none;
+    position: relative;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 1em;
+    margin: 2em 0 0 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: #388E3C 0px 7px 2px, #000 0px 8px 5px;
+}
+
+#view-my-projects:hover {
+    opacity: 1;
+}
+
+#view-my-projects:active {
+    top: 4px;
+    box-shadow: #388E3C 0px 3px 2px,#000 0px 3px 5px;
+}
+
+/* projects section */
+#projects {
+    height: calc(90vh - 71px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#projects-content {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    padding: 0 0 0 10%;
+}
+
+#projects-content h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+#projects-content p {
+    font-weight: 300;
+    margin: 1em 0 0 0;
+}
+
+/* yung project cards */
+.scroll-1::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scroll-1::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #888;
+}
+
+.cardContainer * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.cardContainer {
+    display: flex;
+    overflow-x: scroll;
+    padding: 24px;
+    width: 30%;
+    height: 50vh;
+    scroll-snap-type: x mandatory;
+    scroll-padding-top: 24px;
+    border-radius: 8px;
+    gap: 20px;
+}
+
+.card {
+    /* box-shadow: 8px 8px 15px rgba(251, 111, 146, 0.6); */
+    /* box-shadow: 15px 15px 0 rgba(251, 111, 146, 1); */
+    border-color: #fb6f92;
+    box-shadow: 5px 10px #000000;
+    border: 2px solid #000000
+}
+
+.cardContainer .card {
+    flex: 0 0 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #141414;
+    scroll-snap-align: start;
+}
+
+.card .card__image {
+    flex: 1;
+    height: 100%;
+}
+
+.card:nth-child(1) .card__image {
+    background-image: url("media/karnerphoto.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card:nth-child(2) .card__image {
+    background-image: url("media/guessinggame.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card:nth-child(3) .card__image {
+    background-image: url("media/todolist.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card__image {
+    display: flex;
+    align-items: flex-end;
+}
+
+.card__content {
+    background-color: #141414;
+    padding: 20px;
+}
+
+.card .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card .card__content .card__title {
+    font-size: 32px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.card .card__content .card__describe {
+    color: #fff;
+    font-size: 16px;
+}
+
+
+/* about section */
+/* #about {
+    height: 70%;
+} */
+#about-content.container {
+    width: 100%;
+    height: 100%;
+}
+
+#about-content.container h1 {
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+#sub-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.cont {
+    padding: 20px;
+    width: 33%;
+}
+
+.cont h2 {
+    text-align: center;
+}
+
+.cont p {
+    margin: 0;
+}
+
+/* shet */
+.button-icon {
+    display: flex;
+    border: 3px #fff solid;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+  
+.icon {
+    background-color: #fff;
+    padding: 10px 10px 5px 10px;
+}
+  
+.icon svg {
+    width: 25px;
+    height: 25px;
+}
+  
+.cube {
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 20px;
+}
+  
+.button-icon:hover {
+    border-color: #fb6f92;
+}
+  
+.button-icon:hover .cube {
+    transform: rotateX(90deg);
+}
+
+.side {
+    position: absolute;
+    height: 47px;
+    width: 200px;
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+  
+.top {
+    background: #fb6f92;
+    color: #fff;
+    transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+  
+.front {
+    background: #222229;
+    color: #fff;
+    transform: translate3d(0, 0, 1em);
+}
+/* shet */
+
+/* contact section */
