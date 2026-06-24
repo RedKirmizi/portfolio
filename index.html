@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abegail Ete — Data Analyst</title>
+  <meta name="description" content="Abegail Ete — aspiring data analyst and Computer Science student. Excel, SQL, and Power BI. Turning messy data into clear decisions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;450;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Avoid theme flash: set saved theme before paint -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- scroll progress -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ambient pastel atmosphere -->
+  <div class="atmosphere" aria-hidden="true">
+    <span class="blob blob--lav"></span>
+    <span class="blob blob--mint"></span>
+    <span class="blob blob--blush"></span>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="wordmark" aria-label="Abegail Ete, home">
+        <span class="wordmark__mark">👩‍💻</span>
+        <span class="wordmark__name">Abegail&nbsp;Ete</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">// hello, i&rsquo;m</p>
+          <h1 class="hero__name reveal">Abegail Ete</h1>
+          <p class="hero__role reveal">
+            <span class="hero__role-static">I&rsquo;m a&nbsp;</span>
+            <span class="rotator" id="rotator" aria-live="polite"><span class="rotator__word">Data Analyst</span></span>
+          </p>
+          <p class="hero__tagline reveal">
+            A fourth-year Computer Science student who likes the moment messy data
+            turns into something a person can actually decide from. I work in Excel,
+            SQL, and Power BI &mdash; cleaning, shaping, and visualizing data into clear answers.
+          </p>
+          <div class="hero__cta reveal">
+            <a class="btn btn--primary" href="#work">View my work</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            <a class="btn btn--link" href="assets/Abegail-Ete-Resume.pdf" download="Abegail-Ete-Resume.pdf" id="resumeLink">Résumé <span aria-hidden="true">&darr;</span></a>
+          </div>
+          <p class="hero__meta reveal"><span class="dot"></span> Open to data analyst internships &middot; General Trias City, Cavite</p>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="portrait">
+            <div class="portrait__ring"></div>
+            <img src="assets/abegail.jpeg" alt="Portrait of Abegail Ete" width="320" height="320" />
+            <span class="chip chip--1">Power&nbsp;BI</span>
+            <span class="chip chip--2">SQL</span>
+            <span class="chip chip--3">Excel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <p class="eyebrow reveal">// about</p>
+      <div class="about__grid">
+        <div class="about__lede reveal">
+          <h2 class="section__title">I turn raw data into decisions, not just charts.</h2>
+          <p>
+            Most of my work starts somewhere messy &mdash; a spreadsheet no one wants to
+            open, receipts, sensor logs &mdash; and ends with something clear: a validated
+            dataset, a dashboard, a recommendation. I care a lot about getting the small
+            things right, because in analysis the small things are usually the whole story.
+          </p>
+          <p>
+            Right now I&rsquo;m finishing my Computer Science degree at Lyceum of the
+            Philippines University &ndash; Cavite, and looking for an internship where I can
+            keep learning by doing real analytical work.
+          </p>
+        </div>
+        <ul class="about__stats reveal">
+          <li><span class="stat__k">Dean&rsquo;s Lister</span><span class="stat__v">academic standing</span></li>
+          <li><span class="stat__k">3rd place</span><span class="stat__v">ACube IoT Bootcamp</span></li>
+          <li><span class="stat__k">Power BI &middot; Python</span><span class="stat__v">certified (LinkedIn, Cisco)</span></li>
+          <li><span class="stat__k">BS Computer Science</span><span class="stat__v">LPU &ndash; Cavite</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills">
+      <p class="eyebrow reveal">// skills</p>
+      <h2 class="section__title reveal">The stack I reach for</h2>
+      <div class="skills__grid">
+        <article class="skillcard reveal">
+          <h3>Data &amp; Analytics</h3>
+          <ul class="tags">
+            <li>Excel</li><li>Data Cleaning</li><li>Data Validation</li>
+            <li>PivotTables</li><li>Power BI</li><li>Dashboards</li>
+            <li>SQL</li><li>Internet Research</li>
+          </ul>
+        </article>
+        <article class="skillcard reveal">
+          <h3>Programming</h3>
+          <ul class="tags">
+            <li>Python</li><li>SQL</li><li>HTML/CSS</li>
+            <li>JavaScript</li><li>PHP</li><li>Dart / Flutter</li>
+          </ul>
+        </article>
+        <article class="skillcard reveal">
+          <h3>Databases &amp; Tools</h3>
+          <ul class="tags">
+            <li>MySQL</li><li>Firebase</li><li>Figma</li><li>Notion</li><li>MS Office Suite</li><li>Google Workspace</li><li>SAP Business One</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section work" id="work">
+      <p class="eyebrow reveal">// work</p>
+      <h2 class="section__title reveal">Featured Work</h2>
+
+      <div class="work__grid">
+        <article class="project reveal">
+          <div class="project__top">
+            <span class="project__year">Dec 2025 – Feb 2026</span>
+          </div>
+          <h3 class="project__title">Product Sourcing Assistant &mdash; Coupang Resale</h3>
+          <p class="project__desc">
+            Screened and validated 200+ product listings against price, demand, and logistics criteria.
+            Built Excel datasets tracking SKUs and listing data, ensuring accuracy and searchability.
+            Reworked translated product descriptions to improve marketplace clarity and listing success.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Excel</li><li>Data Cleaning</li><li>Data Validation</li><li>Analytics</li>
+          </ul>
+          <a class="project__link" href="#contact">Ask me about it <span aria-hidden="true">&rarr;</span></a>
+        </article>
+
+        <article class="project project--flipcard reveal" data-flipcard="iot">
+          <div class="project__flip-container">
+            <!-- Front -->
+            <div class="project__face project__face--front">
+              <div class="project__top">
+                <span class="project__year">2024</span>
+                <span class="project__badge">3rd place</span>
+              </div>
+              <h3 class="project__title">IoT Flood Alert Prototype</h3>
+              <p class="project__desc">
+                An IoT flood-monitoring system that reads real-time water-level data from
+                sensors and triggers automated early-warning alerts. I built the threshold
+                logic and visualized sensor trends to support faster disaster-response decisions.
+              </p>
+              <ul class="tags tags--sm">
+                <li>IoT</li><li>Sensors</li><li>Data Viz</li><li>Alerting</li>
+              </ul>
+              <button class="project__flip-btn" aria-label="Flip to see prototype">Flip to reveal <span aria-hidden="true">→</span></button>
+            </div>
+            <!-- Back -->
+            <div class="project__face project__face--back">
+              <img src="assets/prototype.jpeg" alt="IoT Flood Alert Prototype" class="project__prototype-img" />
+              <button class="project__flip-btn" aria-label="Flip back to details">Back <span aria-hidden="true">←</span></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__top">
+            <span class="project__year">2025</span>
+          </div>
+          <h3 class="project__title">ReceiGo &mdash; Mobile Expense Manager</h3>
+          <p class="project__desc">
+            A mobile app that turns photos of receipts into structured expense data using
+            image processing and AI, then surfaces spending patterns through dashboards.
+            I documented the data flow end to end to keep the pipeline maintainable.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Python</li><li>Data Cleaning</li><li>Dashboards</li><li>AI / OCR</li>
+          </ul>
+          <a class="project__link" href="https://github.com/JCarlo04/Receivo-Project-Repository">Explore the repo<span aria-hidden="true">&rarr;</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTS -->
+    <section class="section certs" id="certs">
+      <p class="eyebrow reveal">// certifications</p>
+      <h2 class="section__title reveal">Certifications</h2>
+      <ul class="certs__list">
+        <li class="reveal"><span class="certs__name">IT Specialist &mdash; HTML &amp; CSS</span><span class="certs__by">Certiport</span></li>
+        <li class="reveal"><span class="certs__name">Power BI: Working Together with Microsoft 365 Apps</span><span class="certs__by">LinkedIn</span></li>
+        <li class="reveal"><span class="certs__name">Python Essentials 1 &amp; 2</span><span class="certs__by">Cisco</span></li>
+        <li class="reveal"><span class="certs__name">IoT Bootcamp</span><span class="certs__by">ACube Technologies</span></li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact__card reveal">
+        <p class="eyebrow">// contact</p>
+        <h2 class="contact__title">Let&rsquo;s build something with your data.</h2>
+        <p class="contact__sub">
+          I&rsquo;m looking for a data analyst internship and happy to talk about projects,
+          dashboards, or a possible role. The fastest way to reach me is email.
+        </p>
+        <div class="contact__actions">
+          <a class="btn btn--primary" href="mailto:abegailete02@gmail.com">Email me</a>
+          <a class="btn btn--ghost" href="https://linkedin.com/in/abegail-ete" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/RedKirmizi" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; built by Abegail Ete &middot; <span id="year"></span></p>
+    <button class="to-top" id="toTop" type="button" aria-label="Back to top">Top <span aria-hidden="true">&uarr;</span></button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
